@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "362010899548",
+    "project_id": "mi-taxi-stiat",
+    "storage_bucket": "mi-taxi-stiat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362010899548:android:0f07460749ba377cf22299",
+        "android_client_info": {
+          "package_name": "com.losj.mitaxistiat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "362010899548-1snhfvbvkm7d1ncsn1dmt5ohuspla5sl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5WHdVxBvv0JJ3sP3lH4OCcYit0s2uJpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "362010899548-1snhfvbvkm7d1ncsn1dmt5ohuspla5sl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
