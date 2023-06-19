@@ -8,9 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.losj.mitaxistiat.incluides.MyToolbar;
+
 public class SelectOptionAuthActivity extends AppCompatActivity {
 
-    Toolbar mToolbar;
     Button mButtonGoToLogin;
     Button mButtonGoToRegister;
 
@@ -20,10 +21,8 @@ public class SelectOptionAuthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_option_auth);
 //tolbar
-        mToolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Seleccionar opcion");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        MyToolbar.show(this,"Selecciona una opcion",true);
+
 //        Boton
         mButtonGoToLogin = findViewById(R.id.btnGoToLogin);
         mButtonGoToLogin.setOnClickListener(new View.OnClickListener() {

@@ -17,6 +17,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.losj.mitaxistiat.incluides.MyToolbar;
 
 import dmax.dialog.SpotsDialog;
 
@@ -28,7 +29,6 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     DatabaseReference mDatabase;
     AlertDialog mDialog;
-    Toolbar mToolbar;
 
 
 
@@ -37,18 +37,15 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         //tollbar
-        mToolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("Login");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        MyToolbar.show(this,"Login de usuario",true);
         //register
         mTextImputEmail = findViewById(R.id.textImputEmail);
         mTextImputPassword = findViewById(R.id.textImputPassword);
         mButtonLogin = findViewById(R.id.btnLogin);
-
+        //autfirebase
         mAuth =FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-
+        //alert
         mDialog = new SpotsDialog.Builder().setContext(LoginActivity.this).setMessage("Espere un momento").build();
 
         mButtonLogin.setOnClickListener(new View.OnClickListener() {

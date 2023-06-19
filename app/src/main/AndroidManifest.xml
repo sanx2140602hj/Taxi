@@ -18,10 +18,14 @@
             android:parentActivityName=".SelectOptionAuthActivity"/>
         <activity
             android:name=".RegisterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".SelectOptionAuthActivity"/>
+
         <activity
             android:name=".SelectOptionAuthActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".SelectOptionAuthActivity"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
