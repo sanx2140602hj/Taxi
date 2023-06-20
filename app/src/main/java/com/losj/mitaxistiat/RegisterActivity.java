@@ -82,6 +82,8 @@ public class RegisterActivity extends AppCompatActivity {
             if (password.length() >= 6){
                 mDialog.show();
                 register(name, email, password);
+                Toast.makeText(this, name, Toast.LENGTH_SHORT).show();
+
             } else {
                 Toast.makeText(this, "Contraseña debe tener al menos 8 caracteres", Toast.LENGTH_SHORT).show();
             }
@@ -89,16 +91,18 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(this, "Ingrese por favor todos los campos", Toast.LENGTH_SHORT).show();
         }
     }
-    void register(final String email, String password, String name){
+    void register(final String name, final String email, String password){
         mAuthProvider.register(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 mDialog.hide();
                 if (task.isComplete()){
                     //nuevo metodo user
-                    String id = FirebaseAuth.getInstance().getUid();
+                    String id = FirebaseAuth.getInstance().getCurrentUser().getUid();
                     Client client = new Client(id, name, email);
                     create(client);
+                    Toast.makeText(RegisterActivity.this, "entro a atuh", Toast.LENGTH_SHORT).show();
+
                 } else {
                     Toast.makeText(RegisterActivity.this, "No se pudo registrar usuario, intente más tarde", Toast.LENGTH_SHORT).show();
                 }

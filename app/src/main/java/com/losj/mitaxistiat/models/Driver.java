@@ -4,8 +4,8 @@ public class Driver {
     String id;
     String name;
     String email;
-    String modelsCars; //esto es lo mismo que vehicleBarnd
-    String placaCar; //esto es lo mismo a plate
+    String modelsCars; //esto es lo mismo que vehicleBarnd del video
+    String placaCar; //esto es lo mismo a plate del video
 
     public Driver(String id, String name, String email, String modelsCars, String placaCar) {
         this.id = id;

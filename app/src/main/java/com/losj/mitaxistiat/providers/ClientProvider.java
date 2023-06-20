@@ -10,7 +10,7 @@ public class ClientProvider {
     DatabaseReference mDatabase;
 
     public ClientProvider(){
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child("Clients");
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child("Cliente");
     }
 
     public Task<Void> create(Client client){
